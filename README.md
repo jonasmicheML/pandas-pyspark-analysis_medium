@@ -11,6 +11,7 @@ Find the article here: [Pandas vs. PySpark: Performance Analysis](https://medium
 - [Data](#data)
 - [Constraints](#constraints)
 
+<br>
 
 ## Project Structure
 
@@ -34,6 +35,7 @@ Find the article here: [Pandas vs. PySpark: Performance Analysis](https://medium
 
 All the utilized notebooks, functions, and created Python files are meticulously documented within the respective files themselves, providing comprehensive explanations.
 
+<br>
 
 ## Environment
 
@@ -60,13 +62,13 @@ All the utilized notebooks, functions, and created Python files are meticulously
 - memory: 32 GB 2667 MHz DDR4
 - macOS 13.4.1 
 
-
-
+<br>
 
 ## Data
 All the data is created artificial. The code for the creation can be found in the `0_data_creation.ipynb`.
 I did not upload the test data, if you want to run the notebooks yourself please create the data first.
 
+<br>
 
 ## Constraints
 Although my machine is quite powerful, it sometimes took a long time to run the code. For this reason I have worked in smaller iterations from time to time. Some tests resulted in a memory overload, others did not run due to the size of the data set. 
