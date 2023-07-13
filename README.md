@@ -17,12 +17,8 @@ Find the article here: [Pandas vs. PySpark: Performance Analysis](https://medium
 
 ```
 |-- data
-|    |-- large
-|    |-- small
 |    |-- data/time_statistics_large.csv
 |    |-- data/time_statistics_small.csv
-|
-|-- test
 |
 |-- 0_data_creation.ipynb
 |-- 1_performance_testing.ipynb
