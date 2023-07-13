@@ -31,7 +31,8 @@ Functions (ordered by test order):
     filter_less_10:         Filter the DataFrame by a column value less than 10.
     join_df:                Join two DataFrames.
     multiply_build_in:      Multiply one column of the DataFrame with a constant (using the build in function).
-    multiply_by_selection:  Multiply one column of the DataFrame with a constant (using column selection).   
+    multiply_by_selection:  Multiply one column of the DataFrame with a constant (using column selection).
+    convert_df:             Convert the DataFrame to a different format (Pandas -> PySpark and vice versa).
 """
 
 import time
@@ -305,6 +306,28 @@ def multiply_by_selection(df_pd, df_spark, _):
     spark_counter_start = time.perf_counter_ns()
     # PySpark test code 
     df_spark = df_spark.withColumn("col_0", F.col("col_0") * 2)
+
+    # end spark timer
+    spark_counter_end = time.perf_counter_ns()
+
+    pandas_time = pd_counter_end - pd_counter_start
+    pyspark_time = spark_counter_end - spark_counter_start
+
+    return pandas_time, pyspark_time
+
+def convert_df(df_pd, df_spark, spark_session):
+    ### start pandas timer ###
+    pd_counter_start = time.perf_counter_ns()
+    # Pandas to PySpark
+    df = spark_session.createDataFrame(df_pd)
+
+    ### end pandas timer ###
+    pd_counter_end = time.perf_counter_ns()
+
+    ### start spark timer
+    spark_counter_start = time.perf_counter_ns()
+    # PySpark to Pandas
+    df = df_spark.toPandas()
 
     # end spark timer
     spark_counter_end = time.perf_counter_ns()
