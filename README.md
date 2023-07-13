@@ -65,6 +65,7 @@ All the utilized notebooks, functions, and created Python files are meticulously
 
 ## Data
 All the data is created artificial. The code for the creation can be found in the `0_data_creation.ipynb`.
+I did not upload the test data, if you want to run the notebooks yourself please create the data first.
 
 
 ## Constraints
