@@ -1,3 +1,5 @@
+# I just used the Python-Template for the .gitignore file.
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
